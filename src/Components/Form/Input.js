@@ -1,4 +1,5 @@
 import React from 'react'
+import Error from '../Helper/Error';
 import styles from './Input.module.css';
 
 const Input = ({name, label, type, value, onChange, error, onBlur}) => {
@@ -12,7 +13,7 @@ const Input = ({name, label, type, value, onChange, error, onBlur}) => {
       onChange={onChange}
       onBlur={onBlur}/>
       {/* a msg so aparece se existir error */}
-      {error && <p className={styles.error}>{error}</p>}
+      <Error error={error}/>
     </div>
   );
 }
