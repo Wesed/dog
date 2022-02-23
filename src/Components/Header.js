@@ -6,7 +6,7 @@ import {UserContext} from '../UserContext';
 
 const Header = () => {
 
-  const {data} = React.useContext(UserContext);
+  const {data, userLogout} = React.useContext(UserContext);
 
   return (
     <header className={styles.header}>
@@ -18,8 +18,13 @@ const Header = () => {
         SE data existe, exibe o nome do usuario
         SENAO EXISTE, exibe login / criar */}
         {data ? 
-        <Link className={styles.login} to="login">teste</Link>
+        <Link className={styles.login} to="login">
+          {data.nome}
+          <button onClick={userLogout}>Sair</button>
+        </Link>
         : 
+        // aparece msm se tiver logado, ja que demora 2s pra fazer a validacao. Talvez criar um transition q demore 2s pra aparecer pra 'camuflar' e evitar q apareça 'login' mesmo estando logado
+        // 2s e suficiente pra verificar se tem login ou n
         <Link className={styles.login} to="login">Login | Criar login</Link>}
       </nav>
     </header>
