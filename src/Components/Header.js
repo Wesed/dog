@@ -20,7 +20,6 @@ const Header = () => {
         {data ? 
         <Link className={styles.login} to="login">
           {data.nome}
-          <button onClick={userLogout}>Sair</button>
         </Link>
         : 
         // aparece msm se tiver logado, ja que demora 2s pra fazer a validacao. Talvez criar um transition q demore 2s pra aparecer pra 'camuflar' e evitar q apareça 'login' mesmo estando logado
