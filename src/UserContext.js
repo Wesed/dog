@@ -71,6 +71,9 @@ export const UserStorage = ({children}) => {
           } finally {
             setLoading(false);
           }
+        } else {
+          // senao tiver token e pq nao esta logado, logo login é false
+          setLogin(false);
         }
       }
       autoLogin();
