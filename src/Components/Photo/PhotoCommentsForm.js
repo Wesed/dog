@@ -4,7 +4,7 @@ import useFetch from './../../Hooks/useFetch';
 import { COMMENT_POST } from './../../api';
 import Error from './../Helper/Error';
 import styles from './PhotoCommentsForm.module.css'
-const PhotoCommentsForm = ({id, setComments}) => {
+const PhotoCommentsForm = ({id, setComments, single}) => {
 
   const {request, error} = useFetch();
 
@@ -25,12 +25,11 @@ const PhotoCommentsForm = ({id, setComments}) => {
       * retorna os comments e o comment novo
       */
       setComments((comments) => [...comments, json]);
-      console.log(error);
     }
   }
   
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={`${styles.form} ${single ? styles.single : ''}`} onSubmit={handleSubmit}>
       <textarea  className={styles.textarea}
       id='comment'
       name='comment'
