@@ -29,7 +29,6 @@ const FeedModal = ({photo, setModalPhoto}) => {
       {error && <Error error={error} />}
       {loading && <Loading />}
       {data && <PhotoContent data={data} />}
-      FeedModal
     </div>
   )
 }
