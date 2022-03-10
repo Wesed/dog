@@ -27,9 +27,9 @@ const useForm = (type) => {
     if(value.length === 0) {
       setError('Preencha um valor');
       return false;
-      // se type existir no const 'types' E NAO tiver um regex valido
+      // se type existir no const 'types' E NAO tiver um regex valido (seguindo as regras)
     } else if(types[type] && !types[type].regex.test(value)) {
-      // exibe o erro setad em 'message'
+      // exibe o erro setado em 'message'
       setError(types[type].message);
       return false;
     } else {
