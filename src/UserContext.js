@@ -35,7 +35,6 @@ export const UserStorage = ({children}) => {
       navigate('/conta');
     } catch(err)  {
       setError(err.message);
-      console.log('msg', err.message);
       setLogin(false);
     } finally {
       setLoading(false);

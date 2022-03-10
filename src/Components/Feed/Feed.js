@@ -1,7 +1,8 @@
 import React from "react";
 import FeedModal from "./FeedModal";
 import FeedPhotos from "./FeedPhotos";
-import styles from './Feed.module.css'
+import styles from './Feed.module.css';
+import PropTypes from 'prop-types';
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
@@ -50,4 +51,16 @@ const Feed = ({ user }) => {
   );
 };
 
+// O valor padrao sera 0 quando nao for informado
+Feed.defaultProps = {
+  user: 0,
+}
+
+// o component so vai receber {user} se for uma string ou number
+Feed.propTypes = {
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
+}
 export default Feed;
