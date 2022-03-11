@@ -96,3 +96,20 @@ a {
 .AppBody {
   flex: 1;
 }
+
+.victoryContainer {
+  height: initial !important;
+}
+
+.UserStatsLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.UserStatsLink a:hover,
+.UserStatsLink a:focus {
+  color: #333;
+  opacity: 1;
+  font-weight: bold;
+}
