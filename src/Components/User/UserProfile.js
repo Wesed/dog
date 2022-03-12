@@ -5,7 +5,6 @@ import Head from './../Helper/Head';
 
 const UserProfile = () => {
   const {user} = useParams();
-  console.log(user);
   return (
     <section className='container mainContainer'>
       <Head title={user} />
