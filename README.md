@@ -93,6 +93,11 @@ Todos os créditos de design pertencem ao centro de treinamento Origamid.
 
 - [x] ProtectedRoute
   - Só é permitido comentar, acessar a página de usuários, postar uma nova foto ou ver as estatísticas se estiver logado.
+ 
+ - [x] Lazy & Suspense
+  - Só carrega o componente Victory ao clicar em estatísticas, evitando o carregamento desnecessário de arquivos.
+ 
+ 
   
 
   
